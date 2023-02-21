@@ -5,7 +5,13 @@ pipeline {
 	        steps {
 	            cleanWs()
 	        }
+	    }
+	    
+	    stage ('clone') {
+			steps {
+				sh 'git clone https://github.com/sunilnl18/suni5.git'
 			}
+	    }
 		stage ('build') {
 			steps {
 			    dir ('suni5'){
@@ -24,4 +30,3 @@ pipeline {
     }
   }
 }
-
