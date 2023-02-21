@@ -8,7 +8,7 @@ pipeline {
 			}
 		stage ('build') {
 			steps {
-			    dir ('Git-Project1'){
+			    dir ('suni5'){
 				    echo "Hello Sunil again!!"
 				    sh 'mvn clean install -DskipTests'
 			    }
@@ -17,7 +17,7 @@ pipeline {
 		}
 		stage ('test') {
 			steps {
-			    dir ('Git-Project1') {
+			    dir ('suni5') {
 				    sh 'mvn test'
 			    }
       }
